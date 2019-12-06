@@ -1,5 +1,5 @@
 ---
-- hosts: app
+- hosts: AWS
   become: yes
 
 
@@ -8,6 +8,7 @@
     - appDir : Animals_app
     - repo: Animals_Management
     - account: baptisteivol
+    - ansible_ssh_user: ubuntu
 
 
   tasks:
@@ -41,7 +42,7 @@
 
   - name: Create `/root/.my.cnf`  with root password credentials
     template:
-      src:  my.cnf.j2
+      src:  Conf_Mysql.j2
       dest: /root/.my.cnf
       owner: root
       mode: 0600
@@ -67,7 +68,7 @@
       login_user: root
       login_password: password
       state: import
-      target: "{{homeDir}}{{appDir}}/ansible/schema_bd.sql"
+      target: "{{homeDir}}{{appDir}}/ansible/Schema_BD.sql"
 
   - name: Restart the MySQL service
     service:
@@ -82,7 +83,7 @@
  
   - name: Copy Nginx Config File
     template:
-      src: conf.cfg
+      src: Conf_NginX_VirtualHost.cfg
       dest: /etc/nginx/sites-enabled/default
   
   - name: Restart nginx
