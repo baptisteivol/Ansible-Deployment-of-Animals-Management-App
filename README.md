@@ -24,7 +24,7 @@ On your terminal do :
 Then, inside the correct folder (The one who was created by git) and on your terminal do :
 
 
-    ansible-playbook [PATH]/Deployment.yml
+    ansible-playbook Deployment.yml
 
 **4. How to test the app ?**
 
