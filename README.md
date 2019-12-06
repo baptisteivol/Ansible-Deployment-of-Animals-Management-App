@@ -31,6 +31,6 @@ Then, inside the correct folder (The one who was created by git) and on your ter
 With browser, go to :
 
 
-    http://***[PUBLIC_IP_OR_DNS]***
+    http://[PUBLIC_IP_OR_DNS]
 
 Then, you can add/edit/delete Animals in/from the DB
