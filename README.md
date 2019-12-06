@@ -6,8 +6,10 @@
 
 In your **hosts** file write :
 
-[AWS]
-inv1 ansible_ssh_host=*[PUBLIC_IP_OR_DNS]*
+
+  [AWS]
+  inv1 ansible_ssh_host=*[PUBLIC_IP_OR_DNS]*
+
 
 *If you don't know where the file is, check on **/etc/ansible/ansible.cfg***
 
