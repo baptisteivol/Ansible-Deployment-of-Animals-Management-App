@@ -68,7 +68,7 @@
       login_user: root
       login_password: password
       state: import
-      target: "{{homeDir}}{{appDir}}/ansible/Schema_BD.sql"
+      target: "{{homeDir}}{{appDir}}/BD/Schema.sql"
 
   - name: Restart the MySQL service
     service:
