@@ -86,7 +86,7 @@
       src: Conf_NginX_VirtualHost.cfg
       dest: /etc/nginx/sites-enabled/default
   
-  - name: Restart nginx
+  - name: Restart Nginx
     service:
       name: nginx
       state: restarted
