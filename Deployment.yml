@@ -51,7 +51,7 @@
     mysql_user:
       name: root
       login_unix_socket: /var/run/mysqld/mysqld.sock
-      password: "password"
+      password: "password" #Best Practice - Use Ansible-Vault
       priv: '*.*:ALL,GRANT'
       check_implicit_admin: true
    
@@ -59,14 +59,14 @@
     mysql_db:
       name: favorite_animals
       login_user: root
-      login_password: password
+      login_password: password #Best Practice - Use Ansible-Vault 
       state: present
  
   - name: Create table
     mysql_db: 
       name: favorite_animals
       login_user: root
-      login_password: password
+      login_password: password #Best Practice - Use Ansible-Vault
       state: import
       target: "{{homeDir}}{{appDir}}/BD/Schema.sql"
 

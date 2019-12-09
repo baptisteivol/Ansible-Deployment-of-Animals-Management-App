@@ -34,3 +34,9 @@ With browser, go to :
     http://[PUBLIC_IP_OR_DNS]
 
 Then, you can add/edit/delete Animals in/from the DB
+
+## Deployement.yml - Configurations
+
+
+
+Git Clone Repo : Attention Clé Privée ?
